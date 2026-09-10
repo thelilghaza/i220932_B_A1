@@ -187,7 +187,9 @@ To prove CI prevents broken code from reaching production:
    git commit -m "fix: correct health endpoint test"
    git push origin feature/prediction-api
    ```
-5. **Observation:** GitHub Actions CI re-ran and passed (**GREEN**), unblocking the PR for merge.
+5. **Observation:** GitHub Actions CI re-ran and passed (**GREEN**), unblocking the PR for merge:
+
+   ![GitHub Actions CI Passed Check](docs/screenshots/part6_ci_passed.png)
 
 ---
 

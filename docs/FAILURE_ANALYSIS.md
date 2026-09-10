@@ -59,7 +59,9 @@ FAILED tests/test_app.py::test_health_endpoint - AssertionError: assert 'healthy
    git commit -m "fix: correct health endpoint test"
    git push origin feature/prediction-api
    ```
-3. Re-running `pytest` yields 5/5 passed, and the CI status turns green (`SUCCESS`).
+3. Re-running `pytest` yields 5/5 passed, and the CI status turns green (`SUCCESS`):
+
+   ![GitHub Actions CI Passed Check](screenshots/part6_ci_passed.png)
 
 ---
 

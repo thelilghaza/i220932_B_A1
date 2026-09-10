@@ -39,8 +39,8 @@ In production MLOps, every deployed artifact in staging or production must be st
 | Artifact Attribute | Repository Value | Verification Command |
 | :--- | :--- | :--- |
 | **Pull Request** | `#1` (`feature/prediction-api` &rarr; `main`) | `gh pr view 1` or GitHub PR UI |
-| **Branch Head SHA** | `6f59156` | `git rev-parse --short HEAD` |
-| **Merge Commit SHA** | *(Generated upon PR #1 merge on main)* | `git log --oneline -n 1 main` |
+| **Branch Head SHA** | `6a9e97f` | `git rev-parse --short HEAD` |
+| **Merge Commit SHA** | `86c8978` | `git log --oneline -n 1 main` |
 | **Git Tag** | `v1.0.0` | `git tag -l "v1.0.0"` |
 | **Docker Image Tag** | `student-ml-api:1.0.0`, `student-ml-api:latest`, `student-ml-api:6f59156` | `docker images student-ml-api` |
 | **Image ID** | `sha256:db9a5f6be2748312cfa29fed23aea55c22fcd53b7ec4f4817277ccb8bfaaf6fb` | `docker inspect --format '{{.Id}}' student-ml-api:1.0.0` |
