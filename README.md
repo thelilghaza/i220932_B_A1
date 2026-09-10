@@ -179,7 +179,9 @@ To prove CI prevents broken code from reaching production:
    assert data["status"] == "wrong"
    ```
 2. Commited and pushed to `feature/prediction-api`.
-3. **Observation:** GitHub Actions CI triggered, `pytest` threw `AssertionError: assert 'healthy' == 'wrong'`, and the PR status reported **RED (FAILED)**.
+3. **Observation:** GitHub Actions CI triggered, `pytest` threw `AssertionError: assert 'healthy' == 'wrong'`, and the PR status reported **RED (FAILED)**:
+
+   ![GitHub Actions CI Failed Check](docs/screenshots/part6_ci_failed.png)
 4. **Correction:** Fixed back to `assert data["status"] == "healthy"` with commit:
    ```bash
    git commit -m "fix: correct health endpoint test"

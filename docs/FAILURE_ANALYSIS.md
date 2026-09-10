@@ -17,6 +17,9 @@ assert data["status"] == "wrong"
 Because `data["status"]` is `"healthy"`, Python evaluates the assertion to `False` and raises an unhandled `AssertionError`, causing `pytest` to exit with code 1.
 
 ### 3. Evidence
+
+![GitHub Actions CI Failed Check](screenshots/part6_ci_failed.png)
+
 ```text
 ============================= test session starts ==============================
 platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
