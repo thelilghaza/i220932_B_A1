@@ -1,0 +1,38 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - 'feature/**'
+
+jobs:
+  ci-pipeline:
+    name: CI Pipeline (Test & Docker Build Check)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4
+
+      - name: Python Setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Dependency Installation
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Unit Tests (Pytest)
+        run: |
+          pytest -v tests/test_app.py
+
+      - name: Docker Build Validation
+        run: |
+          docker build -t student-ml-api:ci-test .
+          echo "Docker build check passed. PR CI does not publish images to registry."
