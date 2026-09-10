@@ -297,7 +297,9 @@ This guarantees identical execution on developer workstations, staging clusters,
    }
    ```
 4. Updated tests in `tests/test_app.py`.
-5. Created Pull Request #2 (documented in [`docs/PULL_REQUEST_2.md`](docs/PULL_REQUEST_2.md)), ran CI, reviewed, and merged into `main`.
+5. Created Pull Request #2 (documented in [`docs/PULL_REQUEST_2.md`](docs/PULL_REQUEST_2.md)), ran CI, reviewed, and merged into `main`:
+
+   ![Pull Request 2 CI Passed](docs/screenshots/part19_pr2_ci_passed.png)
 6. Tagged release `v1.1.0`:
    ```bash
    git checkout main && git pull

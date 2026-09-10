@@ -53,10 +53,10 @@ In production MLOps, every deployed artifact in staging or production must be st
 | Artifact Attribute | Repository Value | Notes |
 | :--- | :--- | :--- |
 | **Pull Request** | `#2` (`feature/model-metadata` &rarr; `main`) | Enriched `/health` response with model version |
-| **Branch Head SHA** | *(Commit on `feature/model-metadata`)* | Contains updated `app.py`, `VERSION`, `tests/` |
-| **Merge Commit SHA** | *(Assigned on merge to main)* | Linear squash or merge commit |
+| **Branch Head SHA** | `fa0f578` | Contains updated `app.py`, `VERSION`, `tests/` |
+| **Merge Commit SHA** | `12a678a` | Fast-forward merge commit on `main` |
 | **Git Tag** | `v1.1.0` | Trigger for `release.yml` workflow |
-| **Docker Image Tags** | `student-ml-api:1.1.0`<br>`student-ml-api:latest`<br>`student-ml-api:<commit-sha>` | Pushed to `ghcr.io/thelilghaza/student-ml-api` |
+| **Docker Image Tags** | `student-ml-api:1.1.0`<br>`student-ml-api:latest`<br>`student-ml-api:12a678a` | Pushed to `ghcr.io/thelilghaza/student-ml-api` |
 | **Image Digest** | `sha256:<ghcr-manifest-digest>` | Immutable content-addressable identifier |
 
 ---
